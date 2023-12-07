@@ -1,16 +1,33 @@
-# radio_app
+# Radio App
 
-A new Flutter project.
+To fetch the radio stations list you need to run this [project](https://github.com/Sergiobi9/radioApi) first. Follow the instructions to clone and install the dependencies.
 
-## Getting Started
+Once you have the Radio Api project running, you must get your IP address and change the BASE_URL variable in the Radio App project. It is in the environment.dart class.
 
-This project is a starting point for a Flutter application.
+  ```
+  static String BASE_URL = "{yourIpAddress}:3001";
+  ```
 
-A few resources to get you started if this is your first Flutter project:
+Some functionalities to take into account:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  - Fetch the radio stations given a country, the initial country is Spain
+  - Search for a radio station
+  - Press a radio station from the list to start reproducing
+  - Once a radio station is pressed, a bottom panel will show with the radio station playing and some options as:
+      - Swipe right the panel it reproduces the next radio station from the list
+      - Swipe left the panel it reproduces the previous radio station from the list
+      - Press the panel it goes to the radio station detail page
+      - Press the shuffle button to reproduce a random radio station when you swipe left or right
+      - Press the play or pause button to stop or play the audio from the radio station stream
+   
+  - In the radio station detail, if you press the image it stops or plays the radio station stream
+  - The shuffle button is also there, to reproduce a random radio station when pressing the skip previous or skip next buttons
+  - Press the skip buttons to go to the previous or next buttons (if shuffle is not enabled)
+  - Press the share button to share the stream link
+  - Change the volume with the bottom slider
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+And thats it!
+
+Here is a [demo](https://www.youtube.com/watch?v=eW7COeAszZo&ab_channel=SergiObiols) of what the app does
+
+
