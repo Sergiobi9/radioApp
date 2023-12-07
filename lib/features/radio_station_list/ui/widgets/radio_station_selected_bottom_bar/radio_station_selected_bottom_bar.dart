@@ -119,11 +119,12 @@ class _RadioStationSelectedBottomBarState
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "Now playing",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.green),
-                ),
+                if (widget.radioStation.isPlaying)
+                  const Text(
+                    "Now playing",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.green),
+                  ),
                 const SizedBox(
                   height: 5,
                 ),
