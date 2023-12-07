@@ -11,11 +11,11 @@ class AppInit {
 
   static Future<GoRouter> _initializeRoutes() async {
     var radioStationListModule = await RadioStationListModule().getRoutes();
-    var radioDetailModule = await RadioStationDetailModule().getRoutes();
+    var radioStationDetailModule = await RadioStationDetailModule().getRoutes();
 
     return GoRouter(
         navigatorKey: GlobalKey<NavigatorState>(),
         initialLocation: RadioStationListModule.PATH_NAME,
-        routes: <RouteBase>[radioStationListModule, radioDetailModule]);
+        routes: <RouteBase>[radioStationListModule, radioStationDetailModule]);
   }
 }

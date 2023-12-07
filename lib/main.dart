@@ -32,20 +32,12 @@ class _MyAppState extends State<MyApp> {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]);
-    return MaterialApp(
-      title: 'Radio App',
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: MaterialApp.router(
-        debugShowCheckedModeBanner: false,
-        title: "Radio App",
-        theme: AppTheme.lightTheme,
-        themeAnimationCurve: Curves.bounceIn,
-        routerConfig: widget.appRoutes,
-      ),
+      title: "Radio App",
+      theme: AppTheme.lightTheme,
+      themeAnimationCurve: Curves.bounceIn,
+      routerConfig: widget.appRoutes,
     );
   }
 }

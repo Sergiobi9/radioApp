@@ -102,34 +102,38 @@ class _RadioStationSelectedBottomBarState
     return Expanded(
       child: Row(
         children: [
-          Expanded(
-              child: Padding(
-                  padding: const EdgeInsets.only(left: 15, right: 10),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        "Now playing",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.green),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        widget.radioStation.name,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ],
-                  ))),
+          getRadioStationName(),
           getShuffleRadioStationButton(),
           const SizedBox(width: 10),
           getPausePlayButton()
         ],
       ),
     );
+  }
+
+  getRadioStationName() {
+    return Expanded(
+        child: Padding(
+            padding: const EdgeInsets.only(left: 15, right: 10),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  "Now playing",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.green),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  widget.radioStation.name,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ],
+            )));
   }
 
   getShuffleRadioStationButton() {

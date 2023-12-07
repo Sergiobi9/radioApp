@@ -10,7 +10,7 @@ class RadioStationDetailModule extends BaseModule implements IBaseModule {
   @override
   String TAG = "RadioDetailModule";
 
-  static String PATH_NAME = "/radio_detail";
+  static String PATH_NAME = "/radio_station_detail";
 
   @override
   Future<GoRoute> getRoutes() async {
